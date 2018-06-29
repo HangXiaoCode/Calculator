@@ -129,9 +129,9 @@ def callbackequal():
         result = t1 * t2
     else:
         result = t1 / t2
-    print(result)
+    display=result
     T.delete('1.0', END)
-    T.insert(END, result)
+    T.insert(END, display)
 
 def callbackclear():
     global display
