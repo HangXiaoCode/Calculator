@@ -74,6 +74,8 @@ def callbackplus():
     global t1
     global process
     t1=display
+    if process != 0:
+        sys.exit("errors!")
     print(t1)
     display = 0
     process = 1
@@ -85,6 +87,8 @@ def callbackminus():
     global t1
     global process
     t1=display
+    if process != 0:
+        sys.exit("errors!")
     print(t1)
     display = 0
     process = 2
@@ -96,6 +100,8 @@ def callbacktimes():
     global t1
     global process
     t1 = display
+    if process != 0:
+        sys.exit("errors!")
     print(t1)
     display = 0
     process = 3
@@ -107,6 +113,8 @@ def callbackdivide():
     global t1
     global process
     t1 = display
+    if process != 0:
+        sys.exit("errors!")
     print(t1)
     display = 0
     process = 4
@@ -119,7 +127,6 @@ def callbackequal():
     global process
     global result
     t2 = display
-    print(process)
     print(t2)
     if process == 1:
         result = t1 + t2
@@ -130,6 +137,7 @@ def callbackequal():
     else:
         result = t1 / t2
     display=result
+    process = 0
     T.delete('1.0', END)
     T.insert(END, display)
 
